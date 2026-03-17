@@ -14,7 +14,7 @@ from bs4 import BeautifulSoup
 from models import Todo
 from database import SessionLocal
 from sqlalchemy.orm import Session
-from routers.auth import get_current_user, BASE_DIR
+from routers.auth import get_current_user
 from fastapi.templating import Jinja2Templates
 
 router = APIRouter(
