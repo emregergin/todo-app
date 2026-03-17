@@ -22,8 +22,10 @@ router = APIRouter(
     tags=["Todos"],
 )
 
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-templates = Jinja2Templates(directory=os.path.join(BASE_DIR, "templates"))
+CURRENT_DIR = os.path.dirname(os.path.abspath(__file__))
+PARENT_DIR = os.path.dirname(CURRENT_DIR)
+templates_path = os.path.join(PARENT_DIR, "templates")
+templates = Jinja2Templates(directory=templates_path)
 
 class TodoRequest(BaseModel):
     title: str = Field(min_length=3)
