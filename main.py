@@ -10,10 +10,8 @@ import os
 
 app = FastAPI()
 
-script_dir = os.path.dirname(__file__)
-st_abs_file_path = os.path.join(script_dir, "static/")
-
-app.mount("/static", StaticFiles(directory=st_abs_file_path), name="static")
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+app.mount("/static", StaticFiles(directory=os.path.join(BASE_DIR, "static")), name="static")
 
 @app.get("/healthz")
 async def health_check():
