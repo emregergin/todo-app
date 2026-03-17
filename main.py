@@ -15,6 +15,10 @@ st_abs_file_path = os.path.join(script_dir, "static/")
 
 app.mount("/static", StaticFiles(directory=st_abs_file_path), name="static")
 
+@app.get("/healthz")
+async def health_check():
+    return {"status": "ok"}
+
 @app.get("/")
 async def root(request: Request):
     return RedirectResponse(url="/todos/todo-page", status_code=status.HTTP_302_FOUND)
