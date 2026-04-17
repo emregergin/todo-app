@@ -1,6 +1,4 @@
-# Todo App
-
-[Todo App](https://todo-app-ssot.onrender.com)
+# Todo App (https://todo-app-ssot.onrender.com)
 
 Bu uygulama [FastAPI](https://fastapi.tiangolo.com/) ve **Google Gemini AI** kullanılarak geliştirilmiş bir görev yönetim uygulamasıdır. Kullanıcıların girdiği kısa görev başlıklarını ve açıklamalarını Gemini AI kullanarak daha detaylı ve kapsamlı hale dönüştürür.
 
